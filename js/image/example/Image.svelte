@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { Image } from "@gradio/wasm/svelte";
+
 	export let value: string;
 	export let samples_dir: string;
 	export let type: "gallery" | "table";
@@ -6,12 +8,15 @@
 </script>
 
 <!-- TODO: fix -->
-<!-- svelte-ignore a11y-missing-attribute -->
-<img
+<Image
 	src={samples_dir + value}
-	class:table={type === "table"}
-	class:gallery={type === "gallery"}
-	class:selected
+	class={[
+		type === "table" && "table",
+		type === "gallery" && "gallery",
+		selected && "selected"
+	]
+		.filter((c) => c)
+		.join(" ")}
 />
 
 <style>

@@ -12,8 +12,6 @@ anyio==3.6.1
     # via
     #   httpcore
     #   starlette
-appnope==0.1.3
-    # via ipython
 asyncio==3.4.3
     # via -r requirements.in
 attrs==21.4.0
@@ -67,7 +65,9 @@ entrypoints==0.4
     #   altair
     #   mlflow
 everett[ini]==3.0.0
-    # via comet-ml
+    # via
+    #   comet-ml
+    #   everett
 fastapi==0.87.0
     # via -r requirements.in
 filelock==3.7.1
@@ -86,6 +86,8 @@ gitpython==3.1.27
     # via
     #   mlflow
     #   wandb
+greenlet==3.0.1
+    # via sqlalchemy
 gunicorn==20.1.0
     # via mlflow
 h11==0.12.0
@@ -198,7 +200,7 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
-pillow==9.2.0
+pillow==10.0.1
     # via
     #   imageio
     #   scikit-image
@@ -282,7 +284,9 @@ requests-toolbelt==0.9.1
 respx==0.19.2
     # via -r requirements.in
 rfc3986[idna2008]==1.5.0
-    # via httpx
+    # via
+    #   httpx
+    #   rfc3986
 scikit-image==0.19.3
     # via -r requirements.in
 scikit-learn==1.0.2
@@ -351,6 +355,7 @@ torch==1.12.0
     # via -r requirements.in
 tqdm==4.64.0
     # via
+    #   -r requirements.in
     #   huggingface-hub
     #   shap
     #   transformers
